@@ -1,0 +1,38 @@
+# Misc
+alias deleteAllHere="rm -Rf .* && rm -Rf *.* && rm -Rf *"
+alias gitconfig='git init && echo Name: && read name && echo Email: && read email && git config user.name "$name" && git config user.email "$email"'
+alias pipupgrade='pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U'
+alias dockerstopall='docker stop $(docker ps -a -q) && docker system prune -f'
+alias sigepweb='open ~/Documents/Development/Python/sigepweb/files ; ~/Documents/Development/Python/sigepweb/venv/bin/python ~/Documents/Development/Python/sigepweb/tests..py'
+
+# Conjunto apagar tela
+alias idledelaydefault='gsettings set org.gnome.settings-daemon.plugins.power idle-dim true && gsettings set org.gnome.desktop.session idle-delay 300'
+alias idledelayalwayson='gsettings set org.gnome.settings-daemon.plugins.power idle-dim false && gsettings set org.gnome.desktop.session idle-delay 0'
+alias nuncaapagartela='idledelayalwayson'
+alias apagartela='idledelaydefault'
+
+# Git
+alias genericpush='read "?Enter git message: " MESSAGE && git add . ; git commit -am ${MESSAGE} --no-verify ; git push --no-verify'
+alias gitreset='git add . && git reset --hard'
+
+# Kill
+alias killcode='pkill -9 -f "Visual Studio Code"'
+alias killchrome='pkill -9 -f "Google Chrome"'
+alias killchromecode='killcode ; killchrome'
+alias restartPulse='systemctl --user restart pulseaudio.socket ; systemctl --user restart pulseaudio.service ;'
+
+# Linux
+alias sudo='sudo ' # this is needed to use your aliases with sudo
+alias s='sudo' # this is needed to use your aliases with sudo
+alias l="ls"
+alias lah="l -lah"
+alias lnc="l --color=\"no\""
+alias cpr="cp -R"
+alias rmr="rm -R"
+
+# Softwares
+alias nano='/opt/homebrew/bin/nano'
+#alias pip='pip3'
+alias brewclean='rm -f Brewfile && brew bundle dump && brew bundle --force cleanup && rm -f Brewfile'
+alias killadobe='sudo pkill -9 -f "Adobe" ; sudo pkill -9 -f "ACCFinderSync"'
+

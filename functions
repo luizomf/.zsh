@@ -1,0 +1,13 @@
+function mytouch() {
+  mkdir -p "${1%/*}" && touch "$1"
+  echo "Arquivo \"${1}\" criado com sucesso!"
+}
+
+function component() {
+  code -r src/components/"$1"/styles.ts src/components/"$1"/index.tsx src/components/"$1"/stories.tsx src/components/"$1"/test.tsx
+}
+
+function addtocspell() {
+  [ -z "$1" ] && echo "Empty Param" && return
+  echo $1 >> ~/Documents/Development/config-files/custom-cspell-dictionary.txt
+}

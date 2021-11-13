@@ -1,0 +1,4 @@
+# It enables the option key to navigate words
+bindkey "^[[1;9C" forward-word
+bindkey "^[[1;9D" backward-word
+
