@@ -3,11 +3,15 @@ function mytouch() {
   echo "Arquivo \"${1}\" criado com sucesso!"
 }
 
-function component() {
+function componentTs() {
   code -r src/components/"$1"/styles.ts src/components/"$1"/index.tsx src/components/"$1"/stories.tsx src/components/"$1"/test.tsx
+}
+
+function componentJs() {
+  code -r src/components/"$1"/styles.js src/components/"$1"/index.jsx src/components/"$1"/stories.jsx src/components/"$1"/"$1".spec.jsx
 }
 
 function addtocspell() {
   [ -z "$1" ] && echo "Empty Param" && return
-  echo $1 >> ~/Documents/Development/config-files/custom-cspell-dictionary.txt
+  echo $1 >>~/Documents/Development/config-files/custom-cspell-dictionary.txt
 }
