@@ -23,7 +23,7 @@ alias restartPulse='systemctl --user restart pulseaudio.socket ; systemctl --use
 
 # Linux
 alias sudo='sudo ' # this is needed to use your aliases with sudo
-alias s='sudo' # this is needed to use your aliases with sudo
+alias s='sudo'     # this is needed to use your aliases with sudo
 alias l="ls"
 alias lah="l -lah"
 alias lnc="l --color=\"no\""
