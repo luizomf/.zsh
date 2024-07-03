@@ -1,8 +1,11 @@
 # Misc
-alias deleteAllHere="rm -Rf .* && rm -Rf *.* && rm -Rf *"
+alias deleteAllHere="rm -Rf .* ; rm -Rf *.* ; rm -Rf *"
 alias gitconfig='git init && echo Name: && read name && echo Email: && read email && git config user.name "$name" && git config user.email "$email"'
-alias pipupgrade='pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U'
-alias dockerstopall='docker stop $(docker ps -a -q) && docker system prune -f'
+alias gitlog='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+alias pipupgrade="pip freeze | sed -e 's/==.*//' | xargs pip install --upgrade"
+alias pipdeleteall='pip freeze | xargs pip uninstall -y'
+alias dockerstopall='docker stop $(docker ps -a -q) ; docker system prune -f ; docker rm -vf $(docker ps -aq) ;'
+alias dockerremoveall='docker stop $(docker ps -a -q) ; docker system prune -f ; docker volume prune ; docker rm -vf $(docker ps -aq) ; docker rmi -f $(docker images -aq)'
 alias sigepweb='open ~/Documents/Development/Python/sigepweb/files ; ~/Documents/Development/Python/sigepweb/venv/bin/python ~/Documents/Development/Python/sigepweb/tests..py'
 
 # Conjunto apagar tela

@@ -19,7 +19,7 @@ function addtocspell() {
 function aula_c() {
   [ -z "$1" ] && echo "Empty Param, send a class name" && return
   ffmpeg -i \
-    "/Users/luizotavio/Desktop/curso-python-videos/005-modules/$1.mp4" \
+    "/Users/luizotavio/Desktop/curso-python-videos/011-blog-django/$1.mp4" \
     -c:v libx264 -crf 13 -preset slow -c:a aac -b:a 320k \
-    "/Users/luizotavio/Desktop/curso-python-videos/005-modules/$1-c.mp4"
+    "/Users/luizotavio/Desktop/curso-python-videos/011-blog-django/$1-c.mp4"
 }
