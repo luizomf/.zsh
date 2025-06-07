@@ -1,4 +1,14 @@
-# It enables the option key to navigate words
-bindkey "^[[1;9C" forward-word
-bindkey "^[[1;9D" backward-word
+# Ativa modo VI no ZSH
+# bindkey -v
+# bindkey -M viins jj vi-cmd-mode
 
+# function zle-line-init zle-keymap-select {
+#     RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+#     RPS2=$RPS1
+#     zle reset-prompt
+# }
+
+# zle -N zle-line-init
+# zle -N zle-keymap-select
+
+# autoload -Uz add-zle-hook-widget line-init vi-cmd-mode
