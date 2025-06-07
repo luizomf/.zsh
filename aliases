@@ -42,7 +42,8 @@ alias nano='/opt/homebrew/bin/nano'
 alias brewclean='rm -f Brewfile && brew bundle dump && brew bundle --force cleanup && rm -f Brewfile'
 alias killadobe='sudo pkill -9 -f "Adobe" ; sudo pkill -9 -f "ACCFinderSync" ; sudo pkill -9 -f "CCXProcess.app" ; sudo pkill -9 -f "Core Sync.app" ; sudo pkill -9 -f "CCLibrary.app"'
 
-# Clean mac os
+# Mac OS
 alias cleanmacos='sudo purge; sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder; sudo rm -rf ~/Library/Logs/*; osascript -e "tell app \"Finder\" to empty Trash" &> /dev/null'
 
 alias zs='source ~/.zshrc'  # recarregar config rápido
+alias brewcheck='brew leaves | sort'
