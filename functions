@@ -57,3 +57,13 @@ function deletePythonCache() {
 
     echo "Limpeza concluída com sucesso! ✨"
 }
+
+function corteSuave() {
+  local output=${2:-test.mp4}
+  echo "Aplicando corte suave com aceleração leve em: $*"
+  auto-editor "$@" \
+    --edit audio:threshold=0.09,stream=all,mincut=24 \
+    --margin 0.3s,0.5s \
+    --sounded-speed 1.15 \
+    -o "$output"
+}
